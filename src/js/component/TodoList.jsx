@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const TodoList = () => {
+const TodoList = () => {
     const [inputValue, setInputValue] = useState("");
     const [todos, setTodos] = useState([]);
 
@@ -42,7 +42,7 @@ export const TodoList = () => {
 
     return (
         <div className="container">
-            <h1 className="text-center">Lista de la compra</h1>
+            <h1 className="text-center mb-4">Lista de Tareas</h1>
             <div className="col-12">
                 <input
                     onChange={(e) => setInputValue(e.target.value)}
@@ -91,6 +91,18 @@ export const TodoList = () => {
             <div className="col-12 p-0 text-white text-center">
                 {todos.length} elemento(s)
             </div>
+            <footer className="footer mt-5">
+                <div className="container text-center text-white">
+                    Made by{" "}
+                    <a
+                        href="https://github.com/greyzeids"
+                        target="_blank"
+                        rel=""
+                    >
+                        Miquel Carnot
+                    </a>
+                </div>
+            </footer>
         </div>
     );
 };
