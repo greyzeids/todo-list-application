@@ -40,6 +40,10 @@ const TodoList = () => {
         setTodos(updatedTodos);
     };
 
+    const countPendingTodos = () => {
+        return todos.filter((todo) => !todo.completed).length;
+    };
+
     return (
         <div className="container">
             <h1 className="text-center mb-4">Lista de Tareas</h1>
@@ -89,7 +93,7 @@ const TodoList = () => {
                 ))}
             </ul>
             <div className="col-12 p-0 text-white text-center">
-                {todos.length} elemento(s)
+                {countPendingTodos()} elemento(s) pendiente(s)
             </div>
         </div>
     );
