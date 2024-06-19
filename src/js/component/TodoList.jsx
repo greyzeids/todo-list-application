@@ -91,18 +91,6 @@ const TodoList = () => {
             <div className="col-12 p-0 text-white text-center">
                 {todos.length} elemento(s)
             </div>
-            <footer className="footer mt-5">
-                <div className="container text-center text-white">
-                    Made by{" "}
-                    <a
-                        href="https://github.com/greyzeids"
-                        target="_blank"
-                        rel=""
-                    >
-                        Miquel Carnot
-                    </a>
-                </div>
-            </footer>
         </div>
     );
 };

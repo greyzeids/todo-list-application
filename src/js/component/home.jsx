@@ -1,12 +1,18 @@
 import React from "react";
 import TodoList from "./TodoList";
 import AnimatedBackground from "./AnimateBackground";
+import Footer from "./Footer";
 
-export const Home = () => {
+const Home = () => {
     return (
-        <div className="FormBack">
-            <TodoList />
-            <AnimatedBackground />
+        <div>
+            <div className="FormBack">
+                <div className="content">
+                    <TodoList />
+                    <AnimatedBackground />
+                </div>
+            </div>
+            <Footer />
         </div>
     );
 };
