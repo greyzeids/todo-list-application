@@ -35,7 +35,7 @@ h1 {
 }
 
 .input:focus {
-    border-color: #3898ec;
+    border-color: rgb(0, 255, 187);
     outline: none;
 }
 

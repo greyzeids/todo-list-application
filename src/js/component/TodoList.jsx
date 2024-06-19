@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Checkbox from "./Checkbox";
 
 const TodoList = () => {
     const [inputValue, setInputValue] = useState("");
@@ -77,11 +78,9 @@ const TodoList = () => {
                             todo.completed ? "completed" : ""
                         }`}
                     >
-                        <input
-                            type="checkbox"
+                        <Checkbox
                             checked={todo.completed}
                             onChange={() => handleToggleCompleted(index)}
-                            className="completed mr-2"
                         />
                         {todo.text}
                         <i

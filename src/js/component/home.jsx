@@ -2,6 +2,7 @@ import React from "react";
 import TodoList from "./TodoList";
 import AnimatedBackground from "./AnimateBackground";
 import Footer from "./Footer";
+import Checkbox from "./Checkbox";
 
 const Home = () => {
     return (
