@@ -39,7 +39,6 @@ const TodoList = () => {
                 return todo;
             })
         );
-        setTodos(updatedTodos);
     };
 
     const countPendingTodos = () => {
