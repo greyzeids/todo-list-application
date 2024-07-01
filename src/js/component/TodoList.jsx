@@ -17,27 +17,28 @@ const TodoList = () => {
     }, [todos]);
 
     const handleDelete = (indexToDelete) => {
-        const updatedTodos = todos.filter(
-            (_, index) => index !== indexToDelete
+        setTodos((prevTodos) =>
+            prevTodos.filter((_, index) => index !== indexToDelete)
         );
-        setTodos(updatedTodos);
     };
 
     const handleAddTodo = () => {
         if (inputValue.trim() !== "") {
             const newTodo = { text: inputValue, completed: false };
-            setTodos([...todos, newTodo]);
+            setTodos((prevTodos) => [...prevTodos, newTodo]);
             setInputValue("");
         }
     };
 
     const handleToggleCompleted = (indexToToggle) => {
-        const updatedTodos = todos.map((todo, index) => {
-            if (index === indexToToggle) {
-                return { ...todo, completed: !todo.completed };
-            }
-            return todo;
-        });
+        setTodos((prevTodos) =>
+            prevTodos.map((todo, index) => {
+                if (index === indexToToggle) {
+                    return { ...todo, completed: !todo.completed };
+                }
+                return todo;
+            })
+        );
         setTodos(updatedTodos);
     };
 
